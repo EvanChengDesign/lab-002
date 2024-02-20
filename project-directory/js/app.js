@@ -1,3 +1,5 @@
+'use strict';
+
 // Function to prompt user for their name
 function promptForName() {
   return prompt('Welcome! What is your name?');
