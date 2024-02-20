@@ -1,67 +1,61 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  letter-spacing: 0.5px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #262626;
-  color: white;
-
-  h1, h2, h3, h4, h5, h6 {
-
-    font-weight: bold;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
+  background-color: #f8f9fa;
+  color: #333;
 }
 
 header {
-  background-color: #333333;
-  font-size: 16px;;
-  padding: 25px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+}
 
-
+header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
 
 main {
-
-  margin: 20px auto;
-  max-width: 960px;
-  width: 80%;
-
-  p {
-    text-align: center;
-    color: white;
-  }
-
-  ul {
-    font-size: 16px;
-    text-align: center;
-    margin: 10px;
-
-    li {
-      font-size: 10px;
-      margin: 5px 10px;
-    }
-  }
+  padding: 20px;
 }
+
+section {
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+p {
+  font-size: 1rem;
+  margin-top: 0;
 }
 
 footer {
+  background-color: #343a40;
+  color: #fff;
   text-align: center;
-  background: #333333;
-  color: white;
   padding: 10px;
-  font-size: 12px;;
+}
 
-  ul {
-    margin: 15px;
+/* Specific styles for welcome message */
+#welcome-message {
+  background-color: #17a2b8;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
 
-    li {
-      padding-top: 5px;
-      font-size: 10px;
-      font-weight: bold;
-    }
-  }
+#welcome-message h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+#welcome-message p {
+  font-size: 1.2rem;
 }

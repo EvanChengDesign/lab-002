@@ -23,7 +23,7 @@ function askQuestions() {
   let questions = [
     'Is the sky blue?',
     'Is water wet?',
-    'Do birds fly?',
+    'Does 5+5=10?',
     'Is the earth flat?',
     'Is fire cold?'
   ];
@@ -40,23 +40,23 @@ function askQuestions() {
 
     while (!answeredCorrectly) {
       // Prompt the user for an answer
-      let userAnswer = prompt(questions[i] + ' (yes/no)').toUpperCase();
+      let userAnswer = prompt(questions[i]).toUpperCase();
 
       // Validate user's answer
       if (userAnswer === 'YES' || userAnswer === 'NO') {
         // Check if user's answer is correct
         if (userAnswer === correctAnswers[i]) {
-          console.log('User answered correctly: Yes');
+          // console.log('User answered correctly: Yes');
           alert('Correct!');
           // Store user's answer
           userAnswers.push(userAnswer);
           answeredCorrectly = true;
         } else {
-          console.log('User answered incorrectly: No');
+          // console.log('User answered incorrectly: No');
           alert('Incorrect! Please try again.');
         }
       } else {
-        console.log('Invalid input. Please answer with \'yes\' or \'no\'.');
+        // console.log('Invalid input. Please answer with \'yes\' or \'no\'.');
         alert('Invalid input. Please answer with \'yes\' or \'no\'.');
       }
     }
