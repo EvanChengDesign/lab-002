@@ -7,7 +7,7 @@ function promptForName() {
 function displayWelcomeMessage(userName) {
   let welcomeSection = document.getElementById('welcome-message');
   let welcomeMessage = document.createElement('p');
-  welcomeMessage.textContent = 'Welcome to the site, ' + userName + '!';
+  welcomeMessage.textContent = 'WELCOME TO THE SITE, ' + userName + '!';
   welcomeSection.appendChild(welcomeMessage);
 }
 
