@@ -1,42 +1,70 @@
-// Prompting user for their name
-let userName = prompt('Welcome! What is your name?');
-
-// Display personalized greeting
-alert('Welcome to the site, ' + userName + '!');
-
-// Display name back to the user
-console.log('User\'s name is: ' + userName);
-
-// Function to ask yes/no questions
-function askQuestion(question) {
-  let answer = prompt(question).toLowerCase(); // Normalize user input
-
-  if (answer === 'yes' || answer === 'y') {
-    alert('Correct!');
-    console.log('User answered correctly: Yes');
-  } else if (answer === 'no' || answer === 'n') {
-    alert('Incorrect!');
-    console.log('User answered correctly: No');
-  } else {
-    alert('Invalid input. Please answer with \'yes\' or \'no\'.');
-    console.log('User provided invalid input.');
-    askQuestion(question); // Ask the question again if the input is invalid
-  }
-
-  // Append user's answer to the list
-  let answerListItem = document.createElement('li');
-  answerListItem.textContent = question + ': ' + answer.toUpperCase();
-  document.getElementById('answers-list').appendChild(answerListItem);
+// Function to prompt user for their name
+function promptForName() {
+  return prompt('Welcome! What is your name?');
 }
 
-// Ask the first question
-askQuestion('Is the sky blue?');
+// Function to display a custom welcome message
+function displayWelcomeMessage(userName) {
+  let welcomeSection = document.getElementById('welcome-message');
+  let welcomeMessage = document.createElement('p');
+  welcomeMessage.textContent = 'Welcome to the site, ' + userName + '!';
+  welcomeSection.appendChild(welcomeMessage);
+}
 
-// Ask the second question after the first one
-askQuestion('Is the moon made of cheese?');
+// Function to ask yes/no questions
+function askQuestions() {
+  // Prompt user for their name
+  let userName = promptForName();
 
-// Ask the third question after the second one
-askQuestion('Does fire need oxygen to burn?');
+  // Display custom welcome message
+  displayWelcomeMessage(userName);
 
-// Ask the fourth question after the third one
-askQuestion('Are humans mammals?');
+  // Array of questions
+  let questions = [
+    'Is the sky blue?',
+    'Is water wet?',
+    'Do birds fly?',
+    'Is the earth flat?',
+    'Is fire cold?'
+  ];
+
+  // Array of correct answers
+  let correctAnswers = ['YES', 'YES', 'YES', 'NO', 'NO'];
+
+  // Array to store user's answers
+  let userAnswers = [];
+
+  // Loop through each question
+  for (let i = 0; i < questions.length; i++) {
+    let answeredCorrectly = false;
+
+    while (!answeredCorrectly) {
+      // Prompt the user for an answer
+      let userAnswer = prompt(questions[i] + ' (yes/no)').toUpperCase();
+
+      // Validate user's answer
+      if (userAnswer === 'YES' || userAnswer === 'NO') {
+        // Check if user's answer is correct
+        if (userAnswer === correctAnswers[i]) {
+          console.log('User answered correctly: Yes');
+          alert('Correct!');
+          // Store user's answer
+          userAnswers.push(userAnswer);
+          answeredCorrectly = true;
+        } else {
+          console.log('User answered incorrectly: No');
+          alert('Incorrect! Please try again.');
+        }
+      } else {
+        console.log('Invalid input. Please answer with \'yes\' or \'no\'.');
+        alert('Invalid input. Please answer with \'yes\' or \'no\'.');
+      }
+    }
+  }
+
+  // Display user's answers in the console
+  console.log('User\'s answers:', userAnswers);
+}
+
+// Call the function to ask questions
+askQuestions();
