@@ -29,10 +29,14 @@ function askQuestion(question) {
   document.getElementById('answers-list').appendChild(answerListItem);
 }
 
-// Ask five yes/no questions
+// Ask the first question
 askQuestion('Is the sky blue?');
-askQuestion('Is the earth flat?');
-askQuestion('Do birds fly?');
-askQuestion('Is water wet?');
-askQuestion('Is the sun green?');
 
+// Ask the second question after the first one
+askQuestion('Is the moon made of cheese?');
+
+// Ask the third question after the second one
+askQuestion('Does fire need oxygen to burn?');
+
+// Ask the fourth question after the third one
+askQuestion('Are humans mammals?');
