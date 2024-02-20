@@ -21,6 +21,7 @@ function askQuestions() {
   // Display custom welcome message
   displayWelcomeMessage(userName);
 
+
   // Array of questions
   let questions = [
     'Is the sky blue?',
