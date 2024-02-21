@@ -9,7 +9,7 @@ function promptForName() {
 function displayWelcomeMessage(userName) {
   let welcomeSection = document.getElementById('welcome-message');
   let welcomeMessage = document.createElement('p');
-  welcomeMessage.textContent = 'WELCOME TO THE SITE, ' + userName + '!';
+  welcomeMessage.textContent = 'WELCOME TO THE SITE, ' + userName.toUpperCase() + '!';
   welcomeSection.appendChild(welcomeMessage);
 }
 
